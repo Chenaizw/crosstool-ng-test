@@ -1,1 +1,50 @@
-1
+[DEBUG]  ==> Executing:  'make' '-j6' '-l' 'CXX=' 'default_cflags=' 'BUILD_CFLAGS=-O2 -g -I/home/zhanqianxi/work/toolchain-dev/.build/x86_64-unknown-linux-gnu/buildtools/include  ' 'BUILD_CPPFLAGS= -I/home/zhanqianxi/work/toolchain-dev/.build/x86_64-unknown-linux-gnu/buildtools/include/ -Dstat64=stat' 'BUILD_LDFLAGS=-L/home/zhanqianxi/work/toolchain-dev/.build/x86_64-unknown-linux-gnu/buildtools/lib   -lintl -liconv' 'all'
+[ALL  ]  make[6]: Entering directory '/home/zhanqianxi/work/toolchain-dev/.build/x86_64-unknown-linux-gnu/build/build-libc/multilib'
+[ALL  ]  make -r PARALLELMFLAGS="" -C /home/zhanqianxi/work/toolchain-dev/.build/x86_64-unknown-linux-gnu/src/glibc objdir=`pwd` all
+[ALL  ]  make[7]: Entering directory '/home/zhanqianxi/work/toolchain-dev/.build/src/glibc-2.31'
+[ALL  ]  
+[ALL  ]  type "make help" for help with common glibc makefile targets
+[ALL  ]  
+[ALL  ]  make  subdir=csu -C csu ..=../ subdir_lib
+[ALL  ]  make  subdir=iconv -C iconv ..=../ subdir_lib
+[ALL  ]  make[8]: Entering directory '/home/zhanqianxi/work/toolchain-dev/.build/src/glibc-2.31/iconv'
+[ALL  ]  make[8]: Leaving directory '/home/zhanqianxi/work/toolchain-dev/.build/src/glibc-2.31/iconv'
+[ALL  ]  make  subdir=locale -C locale ..=../ subdir_lib
+[ALL  ]  make[8]: Entering directory '/home/zhanqianxi/work/toolchain-dev/.build/src/glibc-2.31/locale'
+[ALL  ]  make[8]: Leaving directory '/home/zhanqianxi/work/toolchain-dev/.build/src/glibc-2.31/locale'
+[ALL  ]  make  subdir=localedata -C localedata ..=../ subdir_lib
+[ALL  ]  make[8]: Entering directory '/home/zhanqianxi/work/toolchain-dev/.build/src/glibc-2.31/localedata'
+[ALL  ]  make[8]: Nothing to be done for 'subdir_lib'.
+[ALL  ]  make[8]: Leaving directory '/home/zhanqianxi/work/toolchain-dev/.build/src/glibc-2.31/localedata'
+[ALL  ]  make  subdir=iconvdata -C iconvdata ..=../ subdir_lib
+[ALL  ]  make[8]: Entering directory '/home/zhanqianxi/work/toolchain-dev/.build/src/glibc-2.31/iconvdata'
+[ALL  ]  make[8]: Nothing to be done for 'subdir_lib'.
+[ALL  ]  make[8]: Leaving directory '/home/zhanqianxi/work/toolchain-dev/.build/src/glibc-2.31/iconvdata'
+[ALL  ]  make  subdir=assert -C assert ..=../ subdir_lib
+[ALL  ]  make  subdir=ctype -C ctype ..=../ subdir_lib
+[ALL  ]  make  subdir=intl -C intl ..=../ subdir_lib
+[ALL  ]  make  subdir=catgets -C catgets ..=../ subdir_lib
+[ALL  ]  make[8]: Entering directory '/home/zhanqianxi/work/toolchain-dev/.build/src/glibc-2.31/catgets'
+[ALL  ]  make[8]: Leaving directory '/home/zhanqianxi/work/toolchain-dev/.build/src/glibc-2.31/catgets'
+[ALL  ]  make  subdir=math -C math ..=../ subdir_lib
+[ALL  ]  make[8]: Entering directory '/home/zhanqianxi/work/toolchain-dev/.build/src/glibc-2.31/math'
+[ALL  ]  make[8]: Leaving directory '/home/zhanqianxi/work/toolchain-dev/.build/src/glibc-2.31/math'
+[ALL  ]  make  subdir=setjmp -C setjmp ..=../ subdir_lib
+[ALL  ]  make  subdir=signal -C signal ..=../ subdir_lib
+[ALL  ]  make  subdir=stdlib -C stdlib ..=../ subdir_lib
+[ALL  ]  make  subdir=stdio-common -C stdio-common ..=../ subdir_lib
+[ALL  ]        0 [main] make (15832) child_copy: cygheap read copy failed, 0x0..0x800301770, done 0, windows pid 15832, Win32 error 299
+[ERROR]  make[7]: *** [Makefile:470: stdio-common/subdir_lib] Error 127
+[ALL  ]  make[7]: Leaving directory '/home/zhanqianxi/work/toolchain-dev/.build/src/glibc-2.31'
+[ERROR]  make[6]: *** [Makefile:9: all] Error 2
+[ALL  ]  make[6]: Leaving directory '/home/zhanqianxi/work/toolchain-dev/.build/x86_64-unknown-linux-gnu/build/build-libc/multilib'
+[ERROR]  
+[ERROR]  >>
+[ERROR]  >>  Build failed in step '(top-level)'
+[ERROR]  >>
+[ERROR]  >>  Error happened in: CT_DoExecLog[scripts/functions@376]
+[ERROR]  >>        called from: glibc_backend_once[scripts/build/libc/glibc.sh@274]
+[ERROR]  >>        called from: CT_IterateMultilibs[scripts/functions@1608]
+[ERROR]  >>        called from: glibc_main[scripts/build/libc/glibc.sh@40]
+[ERROR]  >>        called from: do_libc_main[scripts/build/libc.sh@33]
+[ERROR]  >>        called from: main[scripts/crosstool-NG.sh@697]
